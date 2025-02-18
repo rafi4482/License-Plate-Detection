@@ -1,7 +1,6 @@
 import streamlit as st
 from ultralytics import YOLO
 import numpy as np
-import cv2
 from PIL import Image
 
 st.set_page_config(page_title="License Plate Detection", layout="wide")
