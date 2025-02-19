@@ -52,7 +52,7 @@ if uploaded_file:
         img_with_boxes = result.plot()
     
     result_image = Image.fromarray(img_with_boxes)
-    st.image(result_image, caption="✅ Detected Image", use_container_width=True)
+    st.image(result_image, caption="✅ Detected Image", use_column_width=True)
     
     st.markdown("<h2 class='centered'>📊 Detection Results:</h2>", unsafe_allow_html=True)
     for result in results:
