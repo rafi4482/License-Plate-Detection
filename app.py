@@ -32,7 +32,11 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-model = YOLO("runs/detect/license_plate_detection/weights/best.pt")
+@st.cache_resource
+def load_model():
+    return YOLO("runs/detect/license_plate_detection/weights/best.pt")
+
+model = load_model()
 
 conf_threshold = st.sidebar.slider("Confidence Threshold", 0.1, 1.0, 0.5, 0.05)
 
